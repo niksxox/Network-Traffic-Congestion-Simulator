@@ -203,28 +203,25 @@ $$\text{Congestion Level} = \max(\rho, Q_{ratio})$$
 ### Scenario 1: Normal Traffic (Smooth Flow)
 - **Settings:** Arrival = $20\text{ pkts/s}$, Capacity = $50\text{ pkts/s}$, Queue = $100$
 - **Result:** Offered load is $40\%$. The traffic light illuminates **GREEN**. Queue length fluctuates near $0-2$ packets. Zero packets dropped.
-![Scenario 1 - Green Normal Traffic](screenshots/scenario_1_green_normal.png)
 
 ---
 
 ### Scenario 2: Increasing Traffic (Approaching Capacity)
 - **Settings:** Arrival = $40\text{ pkts/s}$, Capacity = $50\text{ pkts/s}$, Queue = $100$
 - **Result:** Offered load is $80\%$. The traffic light illuminates **YELLOW**. Small queue builds up. Zero packets dropped, but headroom is reduced.
-![Scenario 2 - Yellow Moderate Traffic](screenshots/scenario_2_yellow_moderate.png)
 
 ---
 
 ### Scenario 3: Heavy Congestion (Buffer Overflow & Tail Drop)
 - **Settings:** Arrival = $80\text{ pkts/s}$, Capacity = $50\text{ pkts/s}$, Queue = $100$
 - **Result:** Offered load is $160\%$. The traffic light illuminates **RED**. Queue fills to $100/100$ packets. Subsequent arrivals are discarded. Packet loss rate continuously increases.
-![Scenario 3 - Red Heavy Congestion](screenshots/scenario_3_red_congested.png)
+
 
 ---
 
 ### Scenario 4: Congestion Recovery Demonstration
 - **Action:** Click **"💧 Reduce Traffic (20 pkts/s)"**.
 - **Result:** Arrival rate drops below processing capacity. The router continues forwarding queued packets at $50\text{ pkts/s}$. The queue drains steadily to $0$. Once the queue is clear, the traffic light transitions back to **GREEN**.
-![Scenario 4 - Congestion Recovery](screenshots/scenario_4_congestion_recovery.png)
 
 ---
 
