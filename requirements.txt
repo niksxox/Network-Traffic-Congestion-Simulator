@@ -1,0 +1,3 @@
+# Network Congestion Traffic Light Simulator
+# Dependencies
+matplotlib>=3.6.0
